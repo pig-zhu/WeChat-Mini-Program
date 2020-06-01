@@ -1,0 +1,15 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<view>
+  <text>2020/05/12</text>
+  <!-- <mp-actionSheet show="{{showActionsheet}}" title="这是一个标题，可以为一行或者两行。">
+  </mp-actionSheet> -->
+  <mp-halfScreenDialog 
+  bindbuttontap="buttontap"
+  show="{{showActionsheet}}"
+  maskClosable="{{false}}" 
+  title="测试标题B" 
+  subTitle="测试标题B的副标题"
+  desc="辅助描述内容，可根据实际需要安排"
+  tips="辅助提示内容，可根据实际需要安排"
+></mp-halfScreenDialog>
+</view>

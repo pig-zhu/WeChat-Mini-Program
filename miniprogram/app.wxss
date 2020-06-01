@@ -5,7 +5,15 @@
   align-items: center;
   box-sizing: border-box;
 } 
-
+.tc{
+  text-align: center;
+}
+.pd10{
+  padding: 10px;
+}
+.dib{
+  display: inline-block;
+}
 button {
   background: initial;
 }

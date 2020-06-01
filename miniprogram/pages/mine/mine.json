@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+   "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet",
+   "mp-halfScreenDialog": "weui-miniprogram/half-screen-dialog/half-screen-dialog"
+  },
+  "navigationBarTitleText":"我的空间"
+}

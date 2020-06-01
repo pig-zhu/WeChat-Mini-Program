@@ -1,0 +1,22 @@
+<!--miniprogram/pages/publish/msg.wxml-->
+<view class="page">
+    <mp-msg type="success" title="发布成功">
+        <view slot="desc">恭喜你！成功发布了一篇文章，接下来请多多加油吧！这是一小步，却是成功的一大步！
+        <!-- <navigator url="" class="weui-msg__link">文字链接</navigator> -->
+        </view>
+        <!-- <view slot="extend">
+            <view>1. 说明1</view>
+            <view>2. 说明2</view>
+        </view> -->
+        <view slot="handle">
+            <button bindtap="toNewsDetail" class="weui-btn" type="primary">立即查看</button>
+            <button class="weui-btn" bindtap="back" type="default">返回再写一篇</button>
+        </view>
+        <view slot="footer">
+            <view class="weui-footer__links">
+                <!-- <navigator url="" class="weui-footer__link">底部链接文本</navigator> -->
+            </view>
+            <view class="weui-footer__text">Copyright © 2020 by {{username}}</view>
+        </view>
+    </mp-msg>
+</view>

@@ -1,0 +1,4 @@
+/* miniprogram/pages/authorization/authorization.wxss */
+button:not([size='mini']){
+  width:150px
+}

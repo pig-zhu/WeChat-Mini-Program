@@ -1,0 +1,56 @@
+/* miniprogram/pages/publish/publish.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.time{
+  color: #ccc;
+  font-size: 24rpx;
+  text-align:center;
+}
+.myForm{
+  width: 100%;
+}
+.input{
+  width: 100%;
+  border:2rpx solid #ccc;
+  height: 80rpx;
+  border-right: 0;
+  border-left: 0;
+}
+.myForm .my-textarea{
+  text-align: left;
+  padding: 20rpx;
+  min-height: 600rpx;
+}
+.textarea{
+  width: 100%;
+  height: 600rpx;
+}
+.btn-area{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120rpx;
+}
+.footer{
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  line-height: 100rpx;
+  transition: all 300ms ease;
+}
+.footer .footer-button{
+  padding-top:26rpx;
+  font-weight:400;
+}
+.footer-button_bg{
+  background-color: #007bffa4;
+  color: #fff;
+}

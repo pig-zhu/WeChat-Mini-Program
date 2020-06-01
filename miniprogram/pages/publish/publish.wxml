@@ -1,0 +1,27 @@
+<!--miniprogram/pages/publish/publish.wxml-->
+<view style="text-align:center;">
+  <text class="time">{{currentTime}}</text>
+  <form class="myForm" catchsubmit="formSubmit" catchreset="formReset">
+   <view class="my-input">
+      <input value='{{form_info}}' placeholder-style="text-align:center" class="input" name="input" placeholder="请输入文章标题" maxlength="10" />
+    </view>
+    <!-- <view class="my-textarea">
+      <textarea value='{{form_info}}' bindblur="bindTextAreaBlur" auto-height class="textarea" placeholder="请输入文章摘要" maxlength="50"  />
+    </view> -->
+    <view class="my-textarea">
+      <textarea value='{{form_info}}' bindblur="bindTextAreaBlur" class="textarea" placeholder="现在的想法..." maxlength="-1"  />
+    </view>
+    <view class="btn-area">      
+        <button style="margin: 30rpx;width:50%;background-color:#ccc" formType="reset">重新输入</button>
+        <button plain="true" disabled="{{isDisable}}" style="margin: 30rpx;width:50%" type="primary" formType="submit">提交</button>
+    </view>
+    <mp-dialog title="温馨提醒" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>请填写完整哦！</view>
+    </mp-dialog>
+  </form>
+
+
+
+
+  
+</view>

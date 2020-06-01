@@ -1,0 +1,24 @@
+<!--miniprogram/pages/authorization/authorization.wxml-->
+<!--miniprogram/pages/publish/msg.wxml-->
+<view class="authorization">
+    <mp-msg type="info" title="温馨提示" >        
+        <view slot="desc">由于您的下一步操作，我们需要获取您的头像、昵称等非敏感信息，请问您是否确认进行下一步？
+        <!-- <navigator url="" class="weui-msg__link">文字链接</navigator> -->
+        </view>
+        <!-- <view slot="extend">
+            <view>1. 说明1</view>
+            <view>2. 说明2</view>
+        </view> -->
+        <view slot="handle">
+            <button class="weui-btn" bindgetuserinfo="userInfo" open-type="getUserInfo" type="primary">确认</button>
+            <button class="weui-btn" bindtap="back" type="default">取消</button>
+        </view>
+        <!-- <view slot="footer"> -->
+            <!-- <view class="weui-footer__links"> -->
+                <!-- <navigator url="" class="weui-footer__link">底部链接文本</navigator> -->
+            <!-- </view> -->
+            <!-- <view class="weui-footer__text">Copyright © 2020 by {{username}}</view> -->
+        <!-- </view> -->
+    </mp-msg>
+</view>
+

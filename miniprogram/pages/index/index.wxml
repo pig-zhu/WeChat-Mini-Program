@@ -2,64 +2,93 @@
 <view class="container">
 
   <!-- 用户 openid -->
-  <view class="userinfo">
-    <button 
+  <view style="width:100%">
+    <!-- <button 
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
       style="background-image: url({{avatarUrl}})"
       size="default"
-    ></button>
-    <view class="userinfo-nickname-wrapper">
+    ></button> -->
+    <!-- <view class="userinfo-nickname-wrapper"> -->
       <!-- <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button> -->
-      <text>欢迎您，{{userInfo.nickName}}</text>
+      <!-- <text>欢迎您，{{userInfo.nickName}}</text> -->
+    <!-- </view> -->
+
+    <!-- 轮播图 -->
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:360rpx">        
+        <block wx:for="{{imgList}}" wx:key="index">
+          <swiper-item>
+            <view>
+              <image mode="aspectFit" style="width:100%;" src="{{item.url}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
   </view>
 
 
   <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
+  <view class="news">
+    <!-- <view class="uploader-text" bindtap="doUpload">
       <text>上传图片</text>
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
+    </view> -->
+    <text class="green">
+    </text>
+    <text class="p1">
+     最近更新
+    </text>
+    <text class="p2">
+     News
+    </text>
   </view>
 
 
   <!-- 操作数据库 -->
-  <view class="uploader">
-    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+  <view id="{{item._id}}" class="newsList" bindtap="toNewsDetail" wx:for="{{newsList}}" wx:key="index">
+    <!-- <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
       <text>前端操作数据库</text>
-    </navigator>
+    </navigator> -->
+    <text class="fengmian">
+      {{item.title}}
+    </text>
+    <!-- <block class> -->
+     <text class="miaoshu">
+      {{item.createTime}}
+     </text>
+    <!-- </block> -->
+  </view>
+  <view wx:if="{{newsList.length==0}}">
+    <text class="empty">
+      还没有发布任何文章哦！
+    </text>
   </view>
 
   <!-- 即时通信 -->
-  <view class="uploader">
-    <navigator url="../im/im" open-type="navigate" class="uploader-text">
+  <!-- <view class="uploader"> -->
+    <!-- <navigator url="../im/im" open-type="navigate" class="uploader-text">
       <text>即时通信 Demo</text>
-    </navigator>
-  </view>
+    </navigator> -->
+  <!-- </view> -->
 
   <!-- 新建云函数 -->
-  <view class="uploader">
-    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+  <!-- <view class="uploader"> -->
+    <!-- <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
       <text>快速新建云函数</text>
-    </navigator>
-  </view>
+    </navigator> -->
+  <!-- </view> -->
 
   <!-- 云调用 -->
-  <view class="uploader">
-    <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
+  <!-- <view class="uploader"> -->
+    <!-- <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
       <text>云调用</text>
-    </navigator>
-  </view>
+    </navigator> -->
+  <!-- </view> -->
 
-  <view class="footer">
-    <button class="footer-button">首页</button>
-    <button class="footer-button">详情</button>
-    <button class="footer-button">发现</button>
-    <button class="footer-button">我</button>
-  </view>
 </view>

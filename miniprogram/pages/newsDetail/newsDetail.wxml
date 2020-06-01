@@ -1,0 +1,25 @@
+<!--miniprogram/pages/newsDetail/newsDetail.wxml-->
+<view class="pd10">
+  <view class="tc">
+    <text class="title">{{newsData.title}}</text>
+  </view>
+  <view class="header">
+   <text class="time">2020/20/20</text>   
+   <view class="dib author">
+     <text class="time sandian">作者: {{newsData.author}}</text>
+   </view>
+   <view class="dib count">
+     <mp-icon  class="myIcon" icon="lock" color="#a3a3a3" size="{{14}}"></mp-icon>
+     <text class="time">仅自己能查看</text>
+   </view>
+  </view> 
+  <view class="qianyan">
+    <text class="line"></text>
+    <text style="margin-top:-10px">
+      书山有路勤为径，学海无涯苦作舟。愿我们能乘风破浪，一览众山小！
+    </text>
+  </view>
+  <view class="detail">
+    {{newsData.content}}
+  </view>
+</view>

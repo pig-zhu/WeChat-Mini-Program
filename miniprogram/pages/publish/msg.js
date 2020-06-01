@@ -1,20 +1,39 @@
-// pages/deployFunctions/deployFunctions.js
+// miniprogram/pages/publish/msg.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    username:'',
+    id:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      id:options.id
+    })
+    this.getUserName()
   },
-
+  toNewsDetail(){
+    wx.navigateTo({
+      url: '../newsDetail/newsDetail?id='+this.data.id,
+    })
+  },
+ //获取用户名
+  getUserName(){
+    var appInstance = getApp()
+    console.log(appInstance.globalData.userInfo)
+    this.setData({
+      username: appInstance.globalData.userInfo.nickName
+    })
+  },
+  back(){
+    wx.navigateBack()
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -14,7 +14,12 @@ App({
         traceUser: true,
       })
     }
-
+    wx.hideTabBar({
+      animation: true,
+    })
     this.globalData = {}
+  },
+  timeInit(time){
+    console.log(time)
   }
 })
